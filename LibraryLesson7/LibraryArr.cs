@@ -131,7 +131,6 @@ namespace LibraryLesson7
         {
             int[,] arr = new int[Y, X];
             Random random = new Random();
-            int counter = 0;
             int more = 0;
             for (int i = 0; i < arr.GetLength(0); i++)
             {
@@ -147,112 +146,107 @@ namespace LibraryLesson7
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    counter = 0;
+                    int counter = 0;
+                    //1
                     if (i - 1 >= 0 && j - 1 >= 0)
                     {
                         if (arr[i, j] > arr[i - 1, j - 1])
                         {
-                            counter = counter + 1;
+                            counter++;
                         }    
                     }
 
                     else
                     {
-                        counter = counter + 1;
+                        counter++;
                     }
 
+                    //2
                     if (i - 1 >= 0)
                     {
                         if (arr[i, j] > arr[i - 1, j])
                         {
-                            counter = counter + 1;
+                            counter++;
                         }
                     }
 
                     else
                     {
-                        counter = counter + 1;
+                        counter++;
                     }
 
-                    if (i - 1 >= 0)
-                    {
-                        if (arr[i, j] > arr[i - 1, j])
-                        {
-                            counter = counter + 1;
-                        }
-                    }
-
-                    else
-                    {
-                        counter = counter + 1;
-                    }
-
-                    if (i - 1 >= 0 && j + 1 <= arr.GetLength(1))
+                    //3
+                    if (i - 1 >= 0 && j + 1 <= arr.GetLength(1)-1)
                     {
                         if (arr[i, j] > arr[i - 1, j + 1])
                         {
-                            counter = counter + 1;
+                            counter++;
                         }
                     }
 
                     else
                     {
-                        counter = counter + 1;
+                        counter++;
                     }
 
+                    //4
                     if (j - 1 >= 0)
                     {
                         if (arr[i, j] > arr[i, j - 1])
                         {
-                            counter = counter + 1;
+                            counter++;
                         }
                     }
 
                     else
                     {
-                        counter = counter + 1;
+                        counter++;
                     }
 
-                    if (j + 1 <= arr.GetLength(1))
+                    //5
+                    if (j + 1 <= arr.GetLength(1)-1)
                     {
                         if (arr[i, j] > arr[i, j + 1])
                         {
-                            counter = counter + 1;
+                            counter++;
                         }
                     }
 
                     else
                     {
-                        counter = counter + 1;
+                        counter++;
                     }
 
-                    if (i + 1 <= arr.GetLength(0) && j - 1 >= 0)
+                    //6
+                    if (i + 1 <= arr.GetLength(0)-1 && j - 1 >= 0)
                     {
                         if (arr[i, j] > arr[i + 1, j - 1])
                         {
-                            counter = counter + 1;
+                            counter++;
                         }
                     }
 
                     else
                     {
-                        counter = counter + 1;
+                        counter++;
                     }
 
-                    if (i + 1 <= arr.GetLength(0))
+                    //7
+                    if (i + 1 <= arr.GetLength(0)-1)
                     {
                         if (arr[i, j] > arr[i + 1, j])
                         {
-                            counter = counter + 1;
+                            counter++;
                         }
                     }
 
                     else
                     {
-                        counter = counter + 1;
+                        counter++;
                     }
 
-                    if (i + 1 <= arr.GetLength(0) && j + 1 <= arr.GetLength(1))
+                    //8
+                    if (i + 1 <= arr.GetLength(0)-1 && j + 1 <= arr.GetLength(1)-1)
                     {
                         if (arr[i, j] > arr[i + 1, j + 1])
                         {
@@ -262,14 +256,13 @@ namespace LibraryLesson7
 
                     else
                     {
-                        counter = counter + 1;
+                        counter++;
                     }
 
                     if (counter == 8)
                     {
-                        more = more + 1;
+                        more++;
                     }
-
                 }
             }
 
