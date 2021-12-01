@@ -4,21 +4,26 @@ namespace LibraryLesson7
 {
     public class LibraryArr
     {
-        public static int Task1(int Y, int X)
+        public static int[,] Random(int Y, int X)
         {
-            int[,] arr = new int[Y, X];
+            int[,] arr = new int[X, Y];
             Random random = new Random();
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
                     arr[i, j] = random.Next(1000);
-                    Console.Write(arr[i, j] + "\t");
                 }
-                Console.WriteLine();
             }
 
-            int min = arr[0, 1];
+            return arr;
+        }
+
+
+        public static int Task1(int [, ] arr)
+        {
+
+            int min = arr[0, 0];
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
@@ -33,21 +38,9 @@ namespace LibraryLesson7
             return min;
         }
 
-        public static int Task2(int Y, int X)
+        public static int Task2(int [, ] arr)
         {
-            int[,] arr = new int[Y, X];
-            Random random = new Random();
-            for (int i = 0; i < arr.GetLength(0); i++)
-            {
-                for (int j = 0; j < arr.GetLength(1); j++)
-                {
-                    arr[i, j] = random.Next(1000);
-                    Console.Write(arr[i, j] + "\t");
-                }
-                Console.WriteLine();
-            }
-
-            int max = arr[0, 1];
+            int max = arr[0, 0];
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
@@ -62,30 +55,16 @@ namespace LibraryLesson7
             return max;
         }
 
-        public static (int column, int line) Task3(int Y, int X)
+        public static (int column, int line) Task3(int [, ] arr)
         {
-            int[,] arr = new int[Y, X];
-            Random random = new Random();
             int line = 0;
             int column = 0;
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    arr[i, j] = random.Next(1000);
-                    Console.Write(arr[i, j] + "\t");
-                }
-                Console.WriteLine();
-            }
-
-            int min = arr[0, 0];
-            for (int i = 0; i < arr.GetLength(0); i++)
-            {
-                for (int j = 0; j < arr.GetLength(1); j++)
-                {
-                    if (arr[i, j] < min)
+                    if (arr[i, j] < arr[column, line])
                     {
-                        min = arr[i, j];
                         column = i;
                         line = j;
                     }
@@ -95,28 +74,15 @@ namespace LibraryLesson7
             return (column, line);
         }
 
-        public static (int column, int line) Task4(int Y, int X)
+        public static (int column, int line) Task4(int [, ] arr)
         {
-            int[,] arr = new int[Y, X];
-            Random random = new Random();
             int line = 0;
             int column = 0;
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    arr[i, j] = random.Next(1000);
-                    Console.Write(arr[i, j] + "\t");
-                }
-                Console.WriteLine();
-            }
-
-            int max = arr[0, 0];
-            for (int i = 0; i < arr.GetLength(0); i++)
-            {
-                for (int j = 0; j < arr.GetLength(1); j++)
-                {
-                    if (arr[i, j] > max)
+                    if (arr[i, j] > arr [column, line])
                     {
                         column = i;
                         line = j;
@@ -127,21 +93,9 @@ namespace LibraryLesson7
             return (column, line);
 
         }
-        public static int Task5(int Y, int X)
+        public static int Task5(int [, ] arr)
         {
-            int[,] arr = new int[Y, X];
-            Random random = new Random();
             int more = 0;
-            for (int i = 0; i < arr.GetLength(0); i++)
-            {
-                for (int j = 0; j < arr.GetLength(1); j++)
-                {
-                    arr[i, j] = random.Next(1000);
-                    Console.Write(arr[i, j] + "\t");
-                }
-                Console.WriteLine();
-            }
-
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
