@@ -4,8 +4,18 @@ namespace LibraryLesson7
 {
     public class LibraryArr
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Y"></param>
+        /// <param name="X"></param>
+        /// <returns></returns>
         public static int[,] Random(int Y, int X)
         {
+            if (Y <= 0 || X <= 0)
+            {
+                throw new ArgumentException("Wrong size of array!");
+            }
             int[,] arr = new int[X, Y];
             Random random = new Random();
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -19,7 +29,11 @@ namespace LibraryLesson7
             return arr;
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
         public static int Task1(int [, ] arr)
         {
 
@@ -38,6 +52,11 @@ namespace LibraryLesson7
             return min;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
         public static int Task2(int [, ] arr)
         {
             int max = arr[0, 0];
@@ -55,6 +74,11 @@ namespace LibraryLesson7
             return max;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
         public static (int column, int line) Task3(int [, ] arr)
         {
             int line = 0;
@@ -74,6 +98,11 @@ namespace LibraryLesson7
             return (column, line);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
         public static (int column, int line) Task4(int [, ] arr)
         {
             int line = 0;
@@ -93,6 +122,12 @@ namespace LibraryLesson7
             return (column, line);
 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
         public static int Task5(int [, ] arr)
         {
             int more = 0;

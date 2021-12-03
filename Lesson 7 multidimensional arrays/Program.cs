@@ -15,12 +15,21 @@ namespace Lesson_7_multidimensional_arrays
                 {
                     case 1:
                         {
-
+                            bool result;
+                            int X;
+                            int Y;
                             Console.WriteLine($"Task№1");
-                            Console.Write("Enter X=");
-                            int X = Convert.ToInt32(Console.ReadLine());
-                            Console.Write("Enter Y=");
-                            int Y = Convert.ToInt32(Console.ReadLine());
+                            do
+                            {
+                                Console.Write("Enter X =");
+                                result = int.TryParse(Console.ReadLine(), out X);
+                            } while (!result);
+
+                            do
+                            {
+                                Console.Write("Enter Y =");
+                                result = int.TryParse(Console.ReadLine(), out Y);
+                            } while (!result);
 
                             int[,] arr = LibraryArr.Random(Y, X);
                             for (int i = 0; i < arr.GetLength(0); i++)
@@ -38,11 +47,22 @@ namespace Lesson_7_multidimensional_arrays
 
                     case 2:
                         {
+                            bool result;
+                            int X;
+                            int Y;
                             Console.WriteLine($"Task№2");
-                            Console.Write("Enter X=");
-                            int X = Convert.ToInt32(Console.ReadLine());
-                            Console.Write("Enter Y=");
-                            int Y = Convert.ToInt32(Console.ReadLine());
+                            do
+                            {
+                                Console.Write("Enter X =");
+                                result = int.TryParse(Console.ReadLine(), out X);
+                            } while (!result);
+
+                            do
+                            {
+                                Console.Write("Enter Y =");
+                                result = int.TryParse(Console.ReadLine(), out Y);
+                            } while (!result);
+
                             int[,] arr = LibraryArr.Random(Y, X);
                             for (int i = 0; i < arr.GetLength(0); i++)
                             {
@@ -59,11 +79,22 @@ namespace Lesson_7_multidimensional_arrays
 
                     case 3:
                         {
+                            bool result;
+                            int X;
+                            int Y;
                             Console.WriteLine($"Task№3");
-                            Console.Write("Enter X=");
-                            int X = Convert.ToInt32(Console.ReadLine());
-                            Console.Write("Enter Y=");
-                            int Y = Convert.ToInt32(Console.ReadLine());
+                            do
+                            {
+                                Console.Write("Enter X =");
+                                result = int.TryParse(Console.ReadLine(), out X);
+                            } while (!result);
+
+                            do
+                            {
+                                Console.Write("Enter Y =");
+                                result = int.TryParse(Console.ReadLine(), out Y);
+                            } while (!result);
+
                             int[,] arr = LibraryArr.Random(Y, X);
                             for (int i = 0; i < arr.GetLength(0); i++)
                             {
@@ -82,11 +113,22 @@ namespace Lesson_7_multidimensional_arrays
 
                     case 4:
                         {
+                            bool result;
+                            int X;
+                            int Y;
                             Console.WriteLine($"Task№4");
-                            Console.Write("Enter X=");
-                            int X = Convert.ToInt32(Console.ReadLine());
-                            Console.Write("Enter Y=");
-                            int Y = Convert.ToInt32(Console.ReadLine());
+                            do
+                            {
+                                Console.Write("Enter X =");
+                                result = int.TryParse(Console.ReadLine(), out X);
+                            } while (!result);
+
+                            do
+                            {
+                                Console.Write("Enter Y =");
+                                result = int.TryParse(Console.ReadLine(), out Y);
+                            } while (!result);
+
                             int[,] arr = LibraryArr.Random(Y, X);
                             for (int i = 0; i < arr.GetLength(0); i++)
                             {
@@ -104,11 +146,22 @@ namespace Lesson_7_multidimensional_arrays
 
                     case 5:
                         {
-                            Console.WriteLine($"Task№4");
-                            Console.Write("Enter X=");
-                            int X = Convert.ToInt32(Console.ReadLine());
-                            Console.Write("Enter Y=");
-                            int Y = Convert.ToInt32(Console.ReadLine());
+                            bool result;
+                            int X;
+                            int Y;
+                            Console.WriteLine($"Task№5");
+                            do
+                            {
+                                Console.Write("Enter X =");
+                                result = int.TryParse(Console.ReadLine(), out X);
+                            } while (!result);
+
+                            do
+                            {
+                                Console.Write("Enter Y =");
+                                result = int.TryParse(Console.ReadLine(), out Y);
+                            } while (!result);
+
                             int[,] arr = LibraryArr.Random(Y, X);
                             for (int i = 0; i < arr.GetLength(0); i++)
                             {

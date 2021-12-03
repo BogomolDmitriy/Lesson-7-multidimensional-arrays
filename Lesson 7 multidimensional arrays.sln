@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson 7 multidimensional arrays", "Lesson 7 multidimensional arrays\Lesson 7 multidimensional arrays.csproj", "{4D4EF764-7740-4446-821C-1FE3DDF336D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryLesson7", "LibraryLesson7\LibraryLesson7.csproj", "{FAF7D5B2-914E-4C1D-B384-66DF7319C380}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryLesson7", "LibraryLesson7\LibraryLesson7.csproj", "{FAF7D5B2-914E-4C1D-B384-66DF7319C380}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultidimensionalArraysTests", "MultidimensionalArraysTests\MultidimensionalArraysTests.csproj", "{BFB5B8C5-534D-427C-B6E8-2354BC76866E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{FAF7D5B2-914E-4C1D-B384-66DF7319C380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAF7D5B2-914E-4C1D-B384-66DF7319C380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAF7D5B2-914E-4C1D-B384-66DF7319C380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB5B8C5-534D-427C-B6E8-2354BC76866E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB5B8C5-534D-427C-B6E8-2354BC76866E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB5B8C5-534D-427C-B6E8-2354BC76866E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB5B8C5-534D-427C-B6E8-2354BC76866E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
